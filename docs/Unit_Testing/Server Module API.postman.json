@@ -1,0 +1,2334 @@
+{
+	"info": {
+		"_postman_id": "623562b3-b3e8-4e32-acbb-9d89388f6277",
+		"name": "Server API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30892117"
+	},
+	"item": [
+		{
+			"name": "Homepage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:11:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "469"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n        <title>Homepage</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome to the Homepage</h1>\n        <p>This is the homepage of the website.</p>\n        <p>\n            <a href=\"/login\">Login</a> or\n            <a href=\"/register\">Register</a>\n        </p>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Log In Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:12:07 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "611"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Login</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Login</h1>\n        <form action=\"/login\" method=\"post\">\n            <label for=\"username\">Username:</label>\n            <input type=\"text\" id=\"username\" name=\"username\" required>\n            <br>\n            <label for=\"password\">Password:</label>\n            <input type=\"password\" id=\"password\" name=\"password\" required>\n            <br>\n            <button type=\"submit\">Login</button>\n        </form>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Log In Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Jenna",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "passwordsss",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Jenna",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:12:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1579"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "account=Jenna; Path=/"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "password=password; Path=/"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>User Profile</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome, Jenna!</h1>\n        <p>This is your profile page.</p>\n        <h2>Your Reviews:</h2>\n        <h3> Team:  </h3>\n        <p> No Team to Display</p>\n        <ul id=\"reviews-list\"></ul>\n        <button onclick=\"window.location.href='/forum'\">Go to Forum</button>\n        <button onclick=\"window.location.href='/writereview'\">Write a Review</button>\n        <button onclick=\"window.location.href='/change_password'\">Change password</button>\n        <button onclick=\"window.location.href='/formteam'\">Create a new team</button>\n        <button onclick=\"window.location.href='/teams'\">Join a team</button>\n        <br>\n        <a href=\"/logout\">Logout</a>\n        <script>\n        // Fetch user reviews and populate the reviews list\n        var username = \"Jenna\"; // Replace this with the actual username\n        var reviewsList = document.getElementById('reviews-list');\n\n        fetch('/api/my_reviews?username=' + username)\n            .then(response => response.json())\n            .then(data => {\n                data.forEach(review => {\n                    var li = document.createElement('li');\n                    li.textContent = review.topic + ': ' + review.content;\n                    reviewsList.appendChild(li);\n                });\n            })\n            .catch(error => console.error('Error fetching reviews:', error));\n    </script>\n    </body>\n</html>"
+				},
+				{
+					"name": "Bad Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Jenna",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "passwordsss",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:13:09 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Incorrect username/password."
+				}
+			]
+		},
+		{
+			"name": "Change Password Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/change_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"change_password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/change_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"change_password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:13:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "710"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Change Password</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n    \n    </head>\n    <body>\n        <h1>Change Password</h1>\n        <form action=\"/change_password\" method=\"post\">\n            <label for=\"old\">Old Password:</label>\n            <input type=\"password\" id=\"old\" name=\"old\" required>\n            <br>\n            <label for=\"new\">New Password:</label>\n            <input type=\"password\" id=\"new\" name=\"new\" required>\n            <br>\n            <button type=\"submit\">Change Password</button>\n        </form>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Change Password Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "old",
+							"value": "notpassword",
+							"type": "text"
+						},
+						{
+							"key": "new",
+							"value": "mypassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/change_password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"change_password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "new",
+									"value": "mypassword",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/change_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"change_password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:14:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1579"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>User Profile</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome, Jenna!</h1>\n        <p>This is your profile page.</p>\n        <h2>Your Reviews:</h2>\n        <h3> Team:  </h3>\n        <p> No Team to Display</p>\n        <ul id=\"reviews-list\"></ul>\n        <button onclick=\"window.location.href='/forum'\">Go to Forum</button>\n        <button onclick=\"window.location.href='/writereview'\">Write a Review</button>\n        <button onclick=\"window.location.href='/change_password'\">Change password</button>\n        <button onclick=\"window.location.href='/formteam'\">Create a new team</button>\n        <button onclick=\"window.location.href='/teams'\">Join a team</button>\n        <br>\n        <a href=\"/logout\">Logout</a>\n        <script>\n        // Fetch user reviews and populate the reviews list\n        var username = \"Jenna\"; // Replace this with the actual username\n        var reviewsList = document.getElementById('reviews-list');\n\n        fetch('/api/my_reviews?username=' + username)\n            .then(response => response.json())\n            .then(data => {\n                data.forEach(review => {\n                    var li = document.createElement('li');\n                    li.textContent = review.topic + ': ' + review.content;\n                    reviewsList.appendChild(li);\n                });\n            })\n            .catch(error => console.error('Error fetching reviews:', error));\n    </script>\n    </body>\n</html>"
+				},
+				{
+					"name": "Bad Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old",
+									"value": "notpassword",
+									"type": "text"
+								},
+								{
+									"key": "new",
+									"value": "mypassword",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/change_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"change_password"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:14:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2154"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "    \n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html>\n    <head>\n        <title>Error: 500 Internal Server Error</title>\n        <style type=\"text/css\">\n              html {background-color: #eee; font-family: sans;}\n              body {background-color: #fff; border: 1px solid #ddd;\n                    padding: 15px; margin: 15px;}\n              pre {background-color: #eee; border: 1px solid #ddd; padding: 5px;}\n            </style>\n    </head>\n    <body>\n        <h1>Error: 500 Internal Server Error</h1>\n        <p>Sorry, the requested URL \n            <tt>&#039;http://localhost:8080/change_password&#039;</tt>\n               caused an error:\n        </p>\n        <pre>Internal Server Error</pre>\n        <h2>Exception:</h2>\n        <pre>KeyError()</pre>\n        <h2>Traceback:</h2>\n        <pre>Traceback (most recent call last):\n  File &quot;/Users/jennahillier/Desktop/Code/COMP2005/term-project-teama/database.py&quot;, line 54, in load\n    return data[key]  # Retrieve account\n           ~~~~^^^^^\nKeyError: &#039;Jenna?notpassword&#039;\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/bottle.py&quot;, line 876, in _handle\n    return route.call(**args)\n           ^^^^^^^^^^^^^^^^^^\n  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/bottle.py&quot;, line 1759, in wrapper\n    rv = callback(*a, **ka)\n         ^^^^^^^^^^^^^^^^^^\n  File &quot;/Users/jennahillier/Desktop/Code/COMP2005/term-project-teama/projectserver.py&quot;, line 100, in do_change_password\n    account = Account.log_in(acc, old)\n              ^^^^^^^^^^^^^^^^^^^^^^^^\n  File &quot;/Users/jennahillier/Desktop/Code/COMP2005/term-project-teama/account.py&quot;, line 28, in log_in\n    return Database.load(&quot;a&quot;, key)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File &quot;/Users/jennahillier/Desktop/Code/COMP2005/term-project-teama/database.py&quot;, line 59, in load\n    raise KeyError\nKeyError\n</pre>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Log Out Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:15:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "469"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "account=none"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "password=none"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n        <title>Homepage</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome to the Homepage</h1>\n        <p>This is the homepage of the website.</p>\n        <p>\n            <a href=\"/login\">Login</a> or\n            <a href=\"/register\">Register</a>\n        </p>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Register Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:15:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "624"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Register</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Register</h1>\n        <form action=\"/register\" method=\"post\">\n            <label for=\"username\">Username:</label>\n            <input type=\"text\" id=\"username\" name=\"username\" required>\n            <br>\n            <label for=\"password\">Password:</label>\n            <input type=\"password\" id=\"password\" name=\"password\" required>\n            <br>\n            <button type=\"submit\">Register</button>\n        </form>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Register Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Jenna",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "mypassword",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mypassword",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:16:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1585"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "account=\"John Doe\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "password=mypassword; Path=/"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>User Profile</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome, John Doe!</h1>\n        <p>This is your profile page.</p>\n        <h2>Your Reviews:</h2>\n        <h3> Team:  </h3>\n        <p> No Team to Display</p>\n        <ul id=\"reviews-list\"></ul>\n        <button onclick=\"window.location.href='/forum'\">Go to Forum</button>\n        <button onclick=\"window.location.href='/writereview'\">Write a Review</button>\n        <button onclick=\"window.location.href='/change_password'\">Change password</button>\n        <button onclick=\"window.location.href='/formteam'\">Create a new team</button>\n        <button onclick=\"window.location.href='/teams'\">Join a team</button>\n        <br>\n        <a href=\"/logout\">Logout</a>\n        <script>\n        // Fetch user reviews and populate the reviews list\n        var username = \"John Doe\"; // Replace this with the actual username\n        var reviewsList = document.getElementById('reviews-list');\n\n        fetch('/api/my_reviews?username=' + username)\n            .then(response => response.json())\n            .then(data => {\n                data.forEach(review => {\n                    var li = document.createElement('li');\n                    li.textContent = review.topic + ': ' + review.content;\n                    reviewsList.appendChild(li);\n                });\n            })\n            .catch(error => console.error('Error fetching reviews:', error));\n    </script>\n    </body>\n</html>"
+				},
+				{
+					"name": "Bad Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Jenna",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mypassword",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:16:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Username already taken."
+				}
+			]
+		},
+		{
+			"name": "Profile Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:17:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1585"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>User Profile</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome, John Doe!</h1>\n        <p>This is your profile page.</p>\n        <h2>Your Reviews:</h2>\n        <h3> Team:  </h3>\n        <p> No Team to Display</p>\n        <ul id=\"reviews-list\"></ul>\n        <button onclick=\"window.location.href='/forum'\">Go to Forum</button>\n        <button onclick=\"window.location.href='/writereview'\">Write a Review</button>\n        <button onclick=\"window.location.href='/change_password'\">Change password</button>\n        <button onclick=\"window.location.href='/formteam'\">Create a new team</button>\n        <button onclick=\"window.location.href='/teams'\">Join a team</button>\n        <br>\n        <a href=\"/logout\">Logout</a>\n        <script>\n        // Fetch user reviews and populate the reviews list\n        var username = \"John Doe\"; // Replace this with the actual username\n        var reviewsList = document.getElementById('reviews-list');\n\n        fetch('/api/my_reviews?username=' + username)\n            .then(response => response.json())\n            .then(data => {\n                data.forEach(review => {\n                    var li = document.createElement('li');\n                    li.textContent = review.topic + ': ' + review.content;\n                    reviewsList.appendChild(li);\n                });\n            })\n            .catch(error => console.error('Error fetching reviews:', error));\n    </script>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Forum Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/forum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"forum"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/forum",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"forum"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:17:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "914"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Forum</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Forum</h1>\n        <ul>\n    </ul>\n        <br>\n        <form action=\"/search\" method=\"post\">\n            <label for=\"search\">Search by:</label>\n            <select name=\"searchchoice\" id=\"searchchoice\">\n                <option value=\"topic\">Topic</option>\n                <option value=\"author\">Author</option>\n                <option value=\"content\">Content</option>\n            </select>\n            <br>\n            <input type=\"text\" id=\"search\" name=\"search\">\n            <input type=\"submit\" value=\"Search\">\n            <br>\n            <br>\n    \n        </form>\n        <a href=\"/sort\">Sort Revies</a>\n        <a href=\"/profile\">Return</a>\n        <a href=\"/logout\">Logout</a>\n        <a href=\"/scheduler\">Go to Scheduler</a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Write Review Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/writereview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"writereview"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/writereview",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"writereview"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:18:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3179"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "        \n<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>New Review</title>\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/styles.css\">\n        <!-- Link to your CSS file -->\n        <style>\n        body {\n            font-family: 'Arial', sans-serif;\n            text-align: center;\n            background-color: #1a1a1a; /* Dark background */\n            color: #fff;\n            margin: 0;\n            padding: 0;\n        }\n\n        h1 {\n            font-size: 2em;\n            color: #4CAF50; /* Green header */\n        }\n\n        .container {\n            margin-top: 20px;\n            max-width: 600px;\n            margin-left: auto;\n            margin-right: auto;\n            background-color: #262626; /* Dark content background */\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);\n            border-radius: 8px;\n            padding: 20px;\n        }\n\n        .review-form {\n            border: 1px solid #4CAF50; /* Green border */\n            border-radius: 5px;\n            padding: 20px;\n            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n            background-color: #333; /* Darker form background */\n        }\n\n        .form-input {\n            display: block;\n            margin: 10px;\n            width: calc(100% - 20px);\n            padding: 10px;\n            border: 1px solid #4CAF50; /* Green border */\n            border-radius: 5px;\n            background-color: #fff; /* White input background */\n            color: #000; /* Black text color */\n        }\n\n        .save-button {\n            background-color: #007bff;\n            color: #fff;\n            padding: 10px 20px;\n            border: none;\n            border-radius: 5px;\n            cursor: pointer;\n            transition: background-color 0.3s ease-in-out;\n        }\n\n        .save-button:hover {\n            background-color: #45a049; /* Darker green on hover */\n        }\n    </style>\n    </head>\n    <body>\n        <header>\n            <h1>New Review</h1>\n        </header>\n        <div class=\"container\">\n            <form action=\"/add_review\" method=\"POST\" class=\"review-form\">\n                <label for=\"topic\">Topic:</label>\n                <select id=\"topic\" name=\"topic\" class=\"form-input\" required>\n                    <option value= \"You are not apart of a Team\"> You are not apart of a Team </option>\n                </select>\n                <label for=\"content\">Review Content:</label>\n                <textarea id=\"content\" name=\"content\" class=\"form-input\" required></textarea>\n                <p>Rate the following on a scale from 1 to 10:</p>\n                <input type=\"number\" min=\"1\" max=\"10\" name=\"effort\"> Effort expended on this topic.</input>\n                <br>\n                <input type=\"number\" min=\"1\" max=\"10\" name=\"communication\"> Communication with team.</input>\n                <br>\n                <input type=\"number\" min=\"1\" max=\"10\" name=\"participation\"> Participation in critical reviews.</input>\n                <br>\n                <input type=\"number\" min=\"1\" max=\"10\" name=\"attendance\"> Attending team meetings.</input>\n                <br>\n                <br>\n                <input type=\"submit\" value=\"Save Review\" class=\"save-button\">\n                <br>\n                <br>\n        \n            </form>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Add Review Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "topic",
+							"value": "Jenna",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "This is a review.",
+							"type": "text"
+						},
+						{
+							"key": "effort",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "communication",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "participation",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "attendance",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/add_review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add_review"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "topic",
+									"value": "Jenna",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "This is a review.",
+									"type": "text"
+								},
+								{
+									"key": "effort",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "communication",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "participation",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "attendance",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/add_review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add_review"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:19:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1601"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Forum</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Forum</h1>\n        <ul>\n            <li>\n                <strong>John Doe:</strong>\n                <em>Jenna</em> - This is a review.\n                <br>\n                &nbsp \n                <strong>Effort:</strong> 5 \n                &nbsp\n                <strong>Communication:</strong> 5 \n                &nbsp\n                <strong>Participation:</strong> 5\n                &nbsp\n                <strong>Attendance:</strong> 5\n                <p>&nbsp Average Rating: 5.0 / 10</p>\n                <a href=\"/edit_review/0/Jenna\">Edit</a>\n                <a href=\"/comment/John Doe/0/Jenna\">Comment</a>\n                <a href=\"/view_comments/John Doe/0/Jenna\">View Comments</a>\n                <a href=\"/delete_post/0/Jenna\"method=\"GET\">Delete</a>\n            </li>\n        </ul>\n        <br>\n        <form action=\"/search\" method=\"post\">\n            <label for=\"search\">Search by:</label>\n            <select name=\"searchchoice\" id=\"searchchoice\">\n                <option value=\"topic\">Topic</option>\n                <option value=\"author\">Author</option>\n                <option value=\"content\">Content</option>\n            </select>\n            <br>\n            <input type=\"text\" id=\"search\" name=\"search\">\n            <input type=\"submit\" value=\"Search\">\n            <br>\n            <br>\n    \n        </form>\n        <a href=\"/sort\">Sort Revies</a>\n        <a href=\"/profile\">Return</a>\n        <a href=\"/logout\">Logout</a>\n        <a href=\"/scheduler\">Go to Scheduler</a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Edit Review Service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/edit_review/0/Jenna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"edit_review",
+						"0",
+						"Jenna"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/edit_review/0/Jenna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"edit_review",
+								"0",
+								"Jenna"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:22:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1415"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Edit Review</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Edit Review</h1>\n        <form action=\"/update_review\" method=\"post\">\n            <label for=\"review\">Topic:</label>\n            <input type=\"hidden\" name=\"review_index\" value=\"0\">\n            <input type=\"hidden\" name=\"review_topic\" value=\"Jenna\">\n            <textarea id=\"review\" name=\"topic\" rows=\"1\" cols=\"10\" required>Jenna></textarea>\n            <br>\n            <textarea id=\"review\" name=\"content\" rows=\"4\" cols=\"50\" required>This is a review.></textarea>\n            <br>\n            <p>Rate the following on a scale from 1 to 10:</p>\n            <input type=\"number\" min=\"1\" max=\"10\" name=\"effort\"> Effort expended on this topic.</input>\n            <br>\n            <input type=\"number\" min=\"1\" max=\"10\" name=\"communication\"> Communication with team.</input>\n            <br>\n            <input type=\"number\" min=\"1\" max=\"10\" name=\"participation\"> Participation in critical reviews.</input>\n            <br>\n            <input type=\"number\" min=\"1\" max=\"10\" name=\"attendance\"> Attending team meetings.</input>\n            <br>\n            <br>\n            <input type=\"submit\" value=\"Save Review\" class=\"save-button\">\n            <br>\n            <br>\n        \n        </form>\n        <br>\n        <a href=\"/forum\">Go to Forum</a>\n        <br>\n        <a href=\"/logout\">Logout</a>\n    </body>\n</html>"
+				},
+				{
+					"name": "Bad Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/edit_review/0/Jenna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"edit_review",
+								"0",
+								"Jenna"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:20:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Review not found"
+				}
+			]
+		},
+		{
+			"name": "Update Review Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "review_index",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "review_topic",
+							"value": "Jenna",
+							"type": "text"
+						},
+						{
+							"key": "effort",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "communication",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "participation",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "attendance",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "topic",
+							"value": "Jenna",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "This is an edited review.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/update_review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update_review"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "review_index",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "review_topic",
+									"value": "Jenna",
+									"type": "text"
+								},
+								{
+									"key": "effort",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "communication",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "participation",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "attendance",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "topic",
+									"value": "Jenna",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "This is an edited review.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/update_review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"update_review"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:24:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1609"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Forum</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Forum</h1>\n        <ul>\n            <li>\n                <strong>John Doe:</strong>\n                <em>Jenna</em> - This is an edited review.\n                <br>\n                &nbsp \n                <strong>Effort:</strong> 8 \n                &nbsp\n                <strong>Communication:</strong> 8 \n                &nbsp\n                <strong>Participation:</strong> 8\n                &nbsp\n                <strong>Attendance:</strong> 8\n                <p>&nbsp Average Rating: 8.0 / 10</p>\n                <a href=\"/edit_review/1/Jenna\">Edit</a>\n                <a href=\"/comment/John Doe/1/Jenna\">Comment</a>\n                <a href=\"/view_comments/John Doe/1/Jenna\">View Comments</a>\n                <a href=\"/delete_post/1/Jenna\"method=\"GET\">Delete</a>\n            </li>\n        </ul>\n        <br>\n        <form action=\"/search\" method=\"post\">\n            <label for=\"search\">Search by:</label>\n            <select name=\"searchchoice\" id=\"searchchoice\">\n                <option value=\"topic\">Topic</option>\n                <option value=\"author\">Author</option>\n                <option value=\"content\">Content</option>\n            </select>\n            <br>\n            <input type=\"text\" id=\"search\" name=\"search\">\n            <input type=\"submit\" value=\"Search\">\n            <br>\n            <br>\n    \n        </form>\n        <a href=\"/sort\">Sort Revies</a>\n        <a href=\"/profile\">Return</a>\n        <a href=\"/logout\">Logout</a>\n        <a href=\"/scheduler\">Go to Scheduler</a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Search Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "search",
+							"value": "Review",
+							"type": "text"
+						},
+						{
+							"key": "searchchoice",
+							"value": "content",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "search",
+									"value": "Review",
+									"type": "text"
+								},
+								{
+									"key": "searchchoice",
+									"value": "content",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:26:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1609"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Forum</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Forum</h1>\n        <ul>\n            <li>\n                <strong>John Doe:</strong>\n                <em>Jenna</em> - This is an edited review.\n                <br>\n                &nbsp \n                <strong>Effort:</strong> 8 \n                &nbsp\n                <strong>Communication:</strong> 8 \n                &nbsp\n                <strong>Participation:</strong> 8\n                &nbsp\n                <strong>Attendance:</strong> 8\n                <p>&nbsp Average Rating: 8.0 / 10</p>\n                <a href=\"/edit_review/1/Jenna\">Edit</a>\n                <a href=\"/comment/John Doe/1/Jenna\">Comment</a>\n                <a href=\"/view_comments/John Doe/1/Jenna\">View Comments</a>\n                <a href=\"/delete_post/1/Jenna\"method=\"GET\">Delete</a>\n            </li>\n        </ul>\n        <br>\n        <form action=\"/search\" method=\"post\">\n            <label for=\"search\">Search by:</label>\n            <select name=\"searchchoice\" id=\"searchchoice\">\n                <option value=\"topic\">Topic</option>\n                <option value=\"author\">Author</option>\n                <option value=\"content\">Content</option>\n            </select>\n            <br>\n            <input type=\"text\" id=\"search\" name=\"search\">\n            <input type=\"submit\" value=\"Search\">\n            <br>\n            <br>\n    \n        </form>\n        <a href=\"/sort\">Sort Revies</a>\n        <a href=\"/profile\">Return</a>\n        <a href=\"/logout\">Logout</a>\n        <a href=\"/scheduler\">Go to Scheduler</a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Sort Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sort",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sort"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sort"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:26:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1609"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Forum</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Forum</h1>\n        <ul>\n            <li>\n                <strong>John Doe:</strong>\n                <em>Jenna</em> - This is an edited review.\n                <br>\n                &nbsp \n                <strong>Effort:</strong> 8 \n                &nbsp\n                <strong>Communication:</strong> 8 \n                &nbsp\n                <strong>Participation:</strong> 8\n                &nbsp\n                <strong>Attendance:</strong> 8\n                <p>&nbsp Average Rating: 8.0 / 10</p>\n                <a href=\"/edit_review/1/Jenna\">Edit</a>\n                <a href=\"/comment/John Doe/1/Jenna\">Comment</a>\n                <a href=\"/view_comments/John Doe/1/Jenna\">View Comments</a>\n                <a href=\"/delete_post/1/Jenna\"method=\"GET\">Delete</a>\n            </li>\n        </ul>\n        <br>\n        <form action=\"/search\" method=\"post\">\n            <label for=\"search\">Search by:</label>\n            <select name=\"searchchoice\" id=\"searchchoice\">\n                <option value=\"topic\">Topic</option>\n                <option value=\"author\">Author</option>\n                <option value=\"content\">Content</option>\n            </select>\n            <br>\n            <input type=\"text\" id=\"search\" name=\"search\">\n            <input type=\"submit\" value=\"Search\">\n            <br>\n            <br>\n    \n        </form>\n        <a href=\"/sort\">Sort Revies</a>\n        <a href=\"/profile\">Return</a>\n        <a href=\"/logout\">Logout</a>\n        <a href=\"/scheduler\">Go to Scheduler</a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Comment Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/comment/John%20Doe/1/Jenna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment",
+						"John%20Doe",
+						"1",
+						"Jenna"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comment/John%20Doe/1/Jenna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment",
+								"John%20Doe",
+								"1",
+								"Jenna"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:29:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "984"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Comment</title>\n    </head>\n    <body>\n        <h1>Comment</h1>\n        <form action=\"/comment\" method=\"post\">\n            <label for=\"comment\">Topic:</label>\n            <input type=\"hidden\" name=\"review_author\" value=\"John Doe\">\n            <input type=\"hidden\" name=\"review_index\" value=\"1\">\n            <input type=\"hidden\" name=\"review_topic\" value=\"Jenna\">\n            <input type=\"hidden\" name=\"review\" value=\"\n            <review.Review object at 0x10222c590>\">\n                <textarea id=\"comment\" name=\"text\" rows=\"4\" cols=\"50\" required></textarea>\n                <br>\n                <input type=\"submit\" value=\"Save Comment\" class=\"save-button\">\n                <br>\n                <br>\n            \n            </form>\n            <br>\n            <a href=\"/forum\">Go to Forum</a>\n            <br>\n            <a href=\"/logout\">Logout</a>\n        </body>\n    </html>"
+				}
+			]
+		},
+		{
+			"name": "Comment Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "review_author",
+							"value": "John Doe",
+							"type": "text"
+						},
+						{
+							"key": "review_index",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "review_topic",
+							"value": "Jenna",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "This is a comment.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "review_author",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "review_index",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "review_topic",
+									"value": "Jenna",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "This is a comment.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/comment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:31:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1609"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Forum</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Forum</h1>\n        <ul>\n            <li>\n                <strong>John Doe:</strong>\n                <em>Jenna</em> - This is an edited review.\n                <br>\n                &nbsp \n                <strong>Effort:</strong> 8 \n                &nbsp\n                <strong>Communication:</strong> 8 \n                &nbsp\n                <strong>Participation:</strong> 8\n                &nbsp\n                <strong>Attendance:</strong> 8\n                <p>&nbsp Average Rating: 8.0 / 10</p>\n                <a href=\"/edit_review/1/Jenna\">Edit</a>\n                <a href=\"/comment/John Doe/1/Jenna\">Comment</a>\n                <a href=\"/view_comments/John Doe/1/Jenna\">View Comments</a>\n                <a href=\"/delete_post/1/Jenna\"method=\"GET\">Delete</a>\n            </li>\n        </ul>\n        <br>\n        <form action=\"/search\" method=\"post\">\n            <label for=\"search\">Search by:</label>\n            <select name=\"searchchoice\" id=\"searchchoice\">\n                <option value=\"topic\">Topic</option>\n                <option value=\"author\">Author</option>\n                <option value=\"content\">Content</option>\n            </select>\n            <br>\n            <input type=\"text\" id=\"search\" name=\"search\">\n            <input type=\"submit\" value=\"Search\">\n            <br>\n            <br>\n    \n        </form>\n        <a href=\"/sort\">Sort Revies</a>\n        <a href=\"/profile\">Return</a>\n        <a href=\"/logout\">Logout</a>\n        <a href=\"/scheduler\">Go to Scheduler</a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "View Comments Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/view_comments/John%20Doe/1/Jenna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"view_comments",
+						"John%20Doe",
+						"1",
+						"Jenna"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/view_comments/John%20Doe/1/Jenna",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"view_comments",
+								"John%20Doe",
+								"1",
+								"Jenna"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:32:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "932"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Review and Comments</title>\n    </head>\n    <body>\n        <h1>Review and Comments</h1>\n        <ul>\n            <li>\n                <strong>John Doe:</strong>\n                <em>Jenna</em> - This is an edited review.\n                <br>\n                    &nbsp \n                <strong>Effort:</strong> 8 \n                    &nbsp\n                <strong>Communication:</strong> 8\n                    &nbsp\n                <strong>Participation:</strong> 8\n                    &nbsp\n                <strong>Attendance:</strong> 8\n                <p>&nbsp Average Rating: 8.0 / 10</p>\n                <br>\n                <strong>John Doe:</strong>\n                <em>This is a comment.</em>\n                </br>\n                \n            </li>\n        </body>\n    </html>"
+				}
+			]
+		},
+		{
+			"name": "Form Team Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/formteam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"formteam"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/formteam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"formteam"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:33:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "567"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Create a new Team</title>\n    </head>\n    <body>\n        <h1>New Team</h1>\n        <form action=\"/formteam\" method=\"post\">\n            <label for=\"team\">Team Name:</label>\n            <input type=\"text\" id=\"team\" name=\"team\" required>\n            <br>\n            <button type=\"submit\">Create Team</button>\n        </form>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Form Team Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "team",
+							"value": "Team A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/formteam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"formteam"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "team",
+									"value": "Team A",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/formteam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"formteam"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:34:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1585"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>User Profile</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome, John Doe!</h1>\n        <p>This is your profile page.</p>\n        <h2>Your Reviews:</h2>\n        <h3> Team:  </h3>\n        <p> No Team to Display</p>\n        <ul id=\"reviews-list\"></ul>\n        <button onclick=\"window.location.href='/forum'\">Go to Forum</button>\n        <button onclick=\"window.location.href='/writereview'\">Write a Review</button>\n        <button onclick=\"window.location.href='/change_password'\">Change password</button>\n        <button onclick=\"window.location.href='/formteam'\">Create a new team</button>\n        <button onclick=\"window.location.href='/teams'\">Join a team</button>\n        <br>\n        <a href=\"/logout\">Logout</a>\n        <script>\n        // Fetch user reviews and populate the reviews list\n        var username = \"John Doe\"; // Replace this with the actual username\n        var reviewsList = document.getElementById('reviews-list');\n\n        fetch('/api/my_reviews?username=' + username)\n            .then(response => response.json())\n            .then(data => {\n                data.forEach(review => {\n                    var li = document.createElement('li');\n                    li.textContent = review.topic + ': ' + review.content;\n                    reviewsList.appendChild(li);\n                });\n            })\n            .catch(error => console.error('Error fetching reviews:', error));\n    </script>\n    </body>\n</html>"
+				},
+				{
+					"name": "Bad Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "team",
+									"value": "Team A",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/formteam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"formteam"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:34:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "19"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "Name already taken."
+				}
+			]
+		},
+		{
+			"name": "Teams Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/teams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"teams"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/teams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"teams"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:34:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "507"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Team Page</title>\n    </head>\n    <body>\n        <h3> Teams:  </h3>\n        <ul>\n            <strong> \"Team A\" </strong>\n            <a href=\"/addmember/Team A/John Doe\">Join</a>\n            <br>\n                \n        </ul>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Add Members Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/addmember/Team%20A/Wasif",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addmember",
+						"Team%20A",
+						"Wasif"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/addmember/Team%20A/Wasif",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addmember",
+								"Team%20A",
+								"Wasif"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:36:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1573"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>User Profile</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n\n\n    </head>\n    <body>\n        <h1>Welcome, John Doe!</h1>\n        <p>This is your profile page.</p>\n        <h2>Your Reviews:</h2>\n        <h3> Team:  </h3>\n        <p> Team A</p>\n        <ul id=\"reviews-list\"></ul>\n        <button onclick=\"window.location.href='/forum'\">Go to Forum</button>\n        <button onclick=\"window.location.href='/writereview'\">Write a Review</button>\n        <button onclick=\"window.location.href='/change_password'\">Change password</button>\n        <button onclick=\"window.location.href='/formteam'\">Create a new team</button>\n        <button onclick=\"window.location.href='/teams'\">Join a team</button>\n        <br>\n        <a href=\"/logout\">Logout</a>\n        <script>\n        // Fetch user reviews and populate the reviews list\n        var username = \"John Doe\"; // Replace this with the actual username\n        var reviewsList = document.getElementById('reviews-list');\n\n        fetch('/api/my_reviews?username=' + username)\n            .then(response => response.json())\n            .then(data => {\n                data.forEach(review => {\n                    var li = document.createElement('li');\n                    li.textContent = review.topic + ': ' + review.content;\n                    reviewsList.appendChild(li);\n                });\n            })\n            .catch(error => console.error('Error fetching reviews:', error));\n    </script>\n    </body>\n</html>"
+				},
+				{
+					"name": "Bad Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/addmember/Team%20A/Wasif",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addmember",
+								"Team%20A",
+								"Wasif"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:36:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "You are already on a team."
+				}
+			]
+		},
+		{
+			"name": "Scheduler Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/scheduler",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scheduler"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/scheduler",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"scheduler"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:37:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "801"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n        <title>Scheduler</title>\n    </head>\n    <body>\n        <h1>Scheduler</h1>\n        <form action=\"/schedule\" method=\"post\">\n            <label for=\"date\">Select a date:</label>\n            <input type=\"date\" id=\"date\" name=\"date\" required>\n            <br>\n            <label for=\"username\">Assign a username:</label>\n            <input type=\"text\" id=\"username\" name=\"username\" required>\n            <br>\n            <button type=\"submit\">Assign Deadline</button>\n        </form>\n        <br>\n        <a href=\"/forum\">Go to Forum</a>\n        <a href=\"/logout\">Logout</a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Schedule Service",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "date",
+						"value": "2023-12-04",
+						"type": "text"
+					},
+					{
+						"key": "username",
+						"value": "John Doe",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/schedule",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedule"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bad Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "date",
+								"value": "2023-12-04",
+								"type": "text"
+							},
+							{
+								"key": "username",
+								"value": "John Doe",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/schedule",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"schedule"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:41:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "This person is not on your team."
+				}
+			]
+		},
+		{
+			"name": "Schedule List Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/schedule_list/Team%20A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedule_list",
+						"Team%20A"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Good Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/schedule_list/Team%20A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"schedule_list",
+								"Team%20A"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Dec 2023 00:41:33 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "733"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Schedule</title>\n        <link rel=\"stylesheet\" href=\"/static/styles.css\">\n        \n    </head>\n    <body>\n        <h1>Schedule</h1>\n        <ul>\n            <p>Current Date: 2023-12-04 </p>\n            <p>Scheduled:</p>\n            <p style=\"color:red;\">Late:\n                    </p>\n        </ul>\n        <a href=\"/profile\">Return</a>\n        <a href=\"/logout\">Logout</a>\n        <a href=\"/scheduler\">Go to Scheduler</a>\n    </body>\n</html>"
+				}
+			]
+		}
+	]
+}
